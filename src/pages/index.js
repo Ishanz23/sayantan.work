@@ -1,184 +1,254 @@
-import * as React from "react"
+import React from 'react'
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+import Skill from '../components/Skill'
+import Employment from '../components/Employment'
+import Certification from '../components/Certification'
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
+export default function Index() {
+  const employments = [
+    {
+      title: 'Frontend Developer',
+      employer: 'eRevMax Technologies Pvt Ltd',
+      start: 'November 2020',
+      end: 'Present',
+      city: 'Kolkata',
+      details: [
+        'Developing an internal web based platform which contains other utility applications. Technologies used: Angular 11, Nx, Angular Material',
+        'Performing R&D and creating POCs on an alternate tech-stack Next.js-NestJs-Mongo-GraphQL for building a SEO-friendly fast Progressive Web App.',
+      ],
+    },
+    {
+      title: 'Angular Developer',
+      employer: 'PRM Fincon',
+      start: 'April 2020',
+      end: 'October 2020',
+      city: 'Kolkata',
+      details: [
+        'Frontend Developer in a team which was building a web based financial product that automates the entire loan approval process for corporates.',
+        'Technologies used: Angular 8, Nx, SCSS',
+      ],
+    },
+    {
+      title: 'Frontend Developer',
+      employer: 'eRevMax Technologies Pvt Ltd',
+      start: 'October 2018',
+      end: 'March 2020',
+      city: 'Kolkata',
+      details: [
+        'Developed the frontend for Agentx, a web based Travel Itinerary building app, that helps travel agents book hotels, flights, cabs and sight-seeing experiences for their customers.',
+        'Technologies used: Angular 8',
+      ],
+    },
+    {
+      title: 'Systems Engineer',
+      employer: 'Tata Consultancy Services',
+      start: 'September 2014',
+      end: 'October 2018',
+      city: 'Kolkata',
+      details: [
+        'Got hands dirty on several technologies starting from Mainframe, Perl, VBScript, Java, Spring, ELK stack before finding my love for Modern Web Development.',
+        'Developed an web based book search repository for client using Angular 5, Bootstrap and Elasticsearch.',
+      ],
+    },
+  ]
+  const educations = [
+    {
+      title: 'B.Tech',
+      employer: 'Netaji Subhash Engineering College',
+      start: 'August 2010',
+      end: 'June 2014',
+      city: 'Kolkata',
+      details: ['Computer Science and Engineering', 'GPA: 7.92'],
+    },
+  ]
+  const internships = [
+    {
+      title: 'Intern',
+      employer: 'IXIA Technologies',
+      start: 'July 2013',
+      end: 'July 2014',
+      city: 'Kolkata',
+      details: [
+        'Learned a bit of Python and Django framework and built a performance management tracker for our internal team.',
+      ],
+    },
+  ]
+  const certifications = [
+    {
+      title: 'Angular - The Complete Guide',
+      institution: 'Udemy',
+      completion: 'December 2018',
+      link: 'https://www.udemy.com/certificate/UC-6PCFDJEK/',
+    },
+    {
+      title: 'JavaScript: Understanding the Weird Parts',
+      institution: 'Udemy',
+      completion: 'May 2021',
+      link: 'https://www.udemy.com/certificate/UC-62cea441-1ecb-4336-b685-700434ccd4bf/',
+    },
+    {
+      title: 'Reactive Angular Course (With RxJs)',
+      institution: 'Udemy',
+      completion: 'June 2020',
+      link: 'https://www.udemy.com/certificate/UC-9b0b8d72-c3c5-4ac4-9c3d-779ad2c6436f/',
+    },
+    {
+      title: 'React - The Complete Guide',
+      institution: 'Udemy',
+      completion: 'September 2018',
+      link: 'https://www.udemy.com/certificate/UC-TV0MCMDJ/',
+    },
+  ]
+  const skills = [
+    { id: 'js', name: 'Javascript', level: '3/4' },
+    { id: 'ng', name: 'Angular', level: '3/4' },
+    { id: 'rct', name: 'React', level: '1/4' },
+    { id: 'njs', name: 'Node.js', level: '1/4' },
+    { id: 'mdb', name: 'MongoDB', level: '1/4' },
+    { id: 'gql', name: 'GraphQL', level: '1/4' },
+  ]
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
-const IndexPage = () => {
+  const languages = [
+    { id: 'bng', name: 'Bengali', level: 'full' },
+    { id: 'eng', name: 'English', level: '3/4' },
+    { id: 'hin', name: 'Hindi', level: '1/4' },
+  ]
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+    <div className='min-w-screen min-h-screen h-full p-8'>
+      <section className='h-full col-span-3 text-gray-800 dark:text-gray-100'>
+        {/* Summary  */}
+        <section className='w-full px-8 py-4 bg-primary text-gray-100 rounded-t-md'>
+          <div className='summary flex gap-8 items-center w-full'>
+            <div className='dp'>
+              <img src='/images/me.png' alt='dp' className='rounded-full' />
+            </div>
+            <div className='details flex flex-1'>
+              <div className='left'>
+                <div className='name text-4xl font-bold flex items-center'>Sayantan Dey</div>
+                <div className='designation pt-4'>Web Developer</div>
+                <div className='links flex items-center pt-4'>
+                  <a href='http://github.com/Ishanz23' target='_' className='lock'>
+                    <img
+                      src='/icons/github-light.png'
+                      alt='github'
+                      width='32'
+                      height='32'
+                      className='rounded-sm inline'
+                    />
+                  </a>
+                  <a href='https://linkedin.com/in/themasterbuilder23' target='_' className='ml-4 block'>
+                    <img
+                      src='/icons/linkedin.png'
+                      alt='linkedin'
+                      className='rounded-sm inline'
+                      width='32'
+                      height='32'
+                    />
+                  </a>
+                </div>
+                <div className='profile flex-1 pt-4'>
+                  <p>
+                    I develop web apps using Angular/React, Node.js and MongoDB. Would relish opportunities to
+                    contribute in backend and devops too.
+                  </p>
+                  <p>My aim is to make the Internet a better place, one app at a time (sometimes two). </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* contacts */}
+        <section className='contacts bg-secondary w-full text-gray-100 font-bold px-8 py-4 flex items-center justify-between rounded-b-md'>
+          <div className='portfolio flex items-center'>
+            <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' viewBox='0 0 20 20' fill='currentColor'>
+              <path
+                fill-rule='evenodd'
+                d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z'
+                clip-rule='evenodd'
+              />
+            </svg>
+            <a href='https://sayantan.work' className='pl-2'>
+              https://sayantan.work
+            </a>
+          </div>
+          <div className='email flex items-center'>
+            <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' viewBox='0 0 20 20' fill='currentColor'>
+              <path d='M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z' />
+              <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
+            </svg>
+            <a href='mailTo:web.dev.sayantan@gmail.com' target='_' className='pl-2'>
+              web.dev.sayantan@gmail.com
+            </a>
+          </div>
+          <div className='phone flex items-center'>
+            <svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>
+              <path d='M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z' />
+              <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
+            </svg>
+            <span className='pl-2'>+91 9748365829</span>
+          </div>
+        </section>
+        <section className='body grid grid-cols-4 py-8'>
+          <div className='left col-span-3'>
+            <section className='employment bg-tertiary rounded-md'>
+              <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+                Employment History
+              </div>
+              <div className='items p-4'>
+                {employments.map((employer) => (
+                  <Employment key={employer.name} item={employer} />
+                ))}
+              </div>
+            </section>
+            <section className='internships bg-tertiary rounded-md mt-8'>
+              <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+                Internships
+              </div>
+              <div className='items p-4'>
+                {internships.map((employer) => (
+                  <Employment key={employer.name} item={employer} />
+                ))}
+              </div>
+            </section>
+            <section className='education bg-tertiary rounded-md mt-8'>
+              <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+                Education
+              </div>
+              <div className='items p-4'>
+                {educations.map((employer) => (
+                  <Employment key={employer.name} item={employer} />
+                ))}
+              </div>
+            </section>
+            <section className='courses bg-tertiary rounded-md mt-8'>
+              <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+                Certifications
+              </div>
+              <div className='items p-4'>
+                {certifications.map((item) => (
+                  <Certification key={item.title} item={item} />
+                ))}
+              </div>
+            </section>
+          </div>
+          <div className='right col-span-1 h-full pl-8'>
+            <div className='h-full w-full p-8 bg-primary text-gray-100 rounded-md'>
+              <div className='skills mb-24'>
+                <div className='heading text-2xl font-semibold mb-4'>Skills</div>
+                {skills.map((skill) => (
+                  <Skill key={skill.id} item={skill} />
+                ))}
+              </div>
+              <div className='languages'>
+                <div className='heading text-2xl font-semibold mb-4'>Languages</div>
+                {languages.map((lang) => (
+                  <Skill key={lang.id} item={lang} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
   )
 }
-
-export default IndexPage
