@@ -94,21 +94,26 @@
     }
   ],
   "skills": [
-    { "id": "js", "name": "Javascript", "level": "w-3/4" },
-    { "id": "ng", "name": "Angular", "level": "w-3/4" },
-    { "id": "rct", "name": "React", "level": "w-1/4" },
-    { "id": "njs", "name": "Node.js", "level": "w-1/4" },
-    { "id": "mdb", "name": "MongoDB", "level": "w-1/4" },
-    { "id": "gql", "name": "GraphQL", "level": "w-1/4" }
+    { "id": "js", "name": "Javascript", "level": "80%" },
+    { "id": "ng", "name": "Angular", "level": "80%" },
+    { "id": "rct", "name": "React", "level": "45%" },
+    { "id": "njs", "name": "Node.js", "level": "35%" },
+    { "id": "mdb", "name": "MongoDB", "level": "25%" },
+    { "id": "gql", "name": "GraphQL", "level": "25%" }
   ],
   "languages": [
-    { "id": "bng", "name": "Bengali", "level": "w-full" },
-    { "id": "eng", "name": "English", "level": "w-3/4" },
-    { "id": "hin", "name": "Hindi", "level": "w-1/4" }
+    { "id": "bng", "name": "Bengali", "level": "100%" },
+    { "id": "eng", "name": "English", "level": "70%" },
+    { "id": "hin", "name": "Hindi", "level": "20%" }
   ],
   "summary": {
     "name": "Sayantan Dey",
     "designation": "Web Developer",
+    "totalExperience": "6 years 8 months",
+    "about": [
+      "I love to develop web apps using Angular/React, Node.js and MongoDB. Would relish opportunities to contribute in backend and devops too.",
+      "My aim is to make the Internet a better place, one app at a time (sometimes two)."
+    ],
     "primarySkills": [
       {
         "name": "Javascript",

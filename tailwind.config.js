@@ -5,9 +5,10 @@ module.exports = {
     extend: {},
     backgroundColor: (theme) => ({
       ...theme('colors'),
-      primary: '#051e29',
-      secondary: '#0A4056',
-      tertiary: '#bae5f7',
+      primary: '#0f2e36',
+      secondary: '#28525d',
+      tertiary: '#bacfd4',
+      accent: '#582944',
     }),
   },
   variants: {

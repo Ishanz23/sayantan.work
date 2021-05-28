@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'sayantan',
+    title: 'Sayantan - Web Dev',
+    description: 'Sayantan - Web Developor Portfolio - Experienced Angular Developer',
+    author: 'Sayantan Dey',
     siteUrl: 'https://sayantan.work',
   },
   plugins: [
@@ -17,10 +19,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: 'Sayantan - Web Dev',
+        short_name: 'Sayantan',
+        start_url: '/',
+        background_color: '#051e29',
+        theme_color: '#0873a1',
+        display: 'standalone',
         icon: 'src/images/icon.png',
       },
     },
-    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

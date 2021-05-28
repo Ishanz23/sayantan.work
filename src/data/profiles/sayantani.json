@@ -1,7 +1,12 @@
 {
   "summary": {
     "name": "Sayantani Sensharma",
-    "designation": "Web Developer",
+    "designation": "SAP FIORI Developer",
+    "totalExperience": "6 years 7 months",
+    "about": [
+      "I'm an SAP FIORI developer with some working experience in ABAP.",
+      "My aim is to make the Internet a better place, one app at a time (sometimes two)."
+    ],
     "primarySkills": [
       {
         "name": "Javascript",
