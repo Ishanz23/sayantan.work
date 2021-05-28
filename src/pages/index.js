@@ -121,9 +121,9 @@ export default function Index() {
   }
 
   return (
-    <section className='min-w-screen min-h-screen w-full h-full p-8 text-gray-800 dark:text-gray-100'>
+    <section className='min-w-screen min-h-screen w-full h-full md:p-8 text-gray-800 dark:text-gray-100'>
       {/* Summary  */}
-      <section className='w-full flex flex-col p-8 sm:py-4 sm:flex-row gap-8 items-center bg-primary text-gray-100 rounded-t-md'>
+      <section className='w-full flex flex-col p-8 sm:py-4 sm:flex-row gap-8 items-center bg-primary text-gray-100 md:rounded-t-md'>
         <div className='dp'>
           <img src='/images/me.png' alt='dp' className='rounded-full' />
         </div>
@@ -153,7 +153,7 @@ export default function Index() {
         </div>
       </section>
       {/* contacts */}
-      <section className='bg-secondary w-full text-gray-100 font-bold px-8 py-4 mb-8 md:flex md:items-center md:justify-between rounded-b-md'>
+      <section className='bg-secondary w-full text-gray-100 font-bold px-8 py-4 md:mb-8 md:flex md:items-center md:justify-between md:rounded-b-md'>
         <div className='portfolio flex items-center my-4 md:my-0'>
           <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' viewBox='0 0 20 20' fill='currentColor'>
             <path
@@ -186,8 +186,8 @@ export default function Index() {
       {/* body */}
       <section className='body grid grid-cols-1 md:grid-cols-4'>
         <div className='left col-span-1 md:col-span-3'>
-          <section className='employment bg-tertiary rounded-md'>
-            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+          <section className='employment bg-tertiary md:rounded-md'>
+            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 md:rounded-t-md'>
               Employment History
             </div>
             <div className='items p-4'>
@@ -196,8 +196,8 @@ export default function Index() {
               ))}
             </div>
           </section>
-          <section className='internships bg-tertiary rounded-md mt-8'>
-            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+          <section className='internships bg-tertiary md:rounded-md md:mt-8'>
+            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 md:rounded-t-md'>
               Internships
             </div>
             <div className='items p-4'>
@@ -206,8 +206,8 @@ export default function Index() {
               ))}
             </div>
           </section>
-          <section className='education bg-tertiary rounded-md mt-8'>
-            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+          <section className='education bg-tertiary md:rounded-md md:mt-8'>
+            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 md:rounded-t-md'>
               Education
             </div>
             <div className='items p-4'>
@@ -216,8 +216,8 @@ export default function Index() {
               ))}
             </div>
           </section>
-          <section className='courses bg-tertiary rounded-md mt-8'>
-            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 rounded-t-md'>
+          <section className='courses bg-tertiary md:rounded-md md:mt-8'>
+            <div className='heading text-2xl font-bold uppercase mb-4 bg-primary text-gray-100 px-4 py-2 md:rounded-t-md'>
               Certifications
             </div>
             <div className='items p-4'>
@@ -227,8 +227,8 @@ export default function Index() {
             </div>
           </section>
         </div>
-        <div className='right col-span-1 h-full mt-8 md:mt-0 md:pl-8'>
-          <div className='h-full w-full p-8 bg-primary text-gray-100 rounded-md'>
+        <div className='right col-span-1 h-full md:pl-8'>
+          <div className='h-full w-full p-8 bg-primary text-gray-100 md:rounded-md'>
             <div className='skills mb-24'>
               <div className='heading text-2xl font-semibold mb-4'>Skills</div>
               {skills.map((skill) => (
