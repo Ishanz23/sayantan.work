@@ -143,7 +143,7 @@ export default function Index() {
               <img src='/icons/linkedin.png' alt='linkedin' className='rounded-sm inline' width='32' height='32' />
             </a>
           </div>
-          <div className='text-center sm:text-left flex-1 pt-4'>
+          <div className='text-center sm:text-left flex-1 p-4 mt-4 rounded-md bg-secondary'>
             <p>
               I develop web apps using Angular/React, Node.js and MongoDB. Would relish opportunities to contribute in
               backend and devops too.
