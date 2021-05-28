@@ -120,6 +120,13 @@ export default function Index() {
     primarySkills: ['Javascript', 'Angular', 'Next.js', 'NestJS'],
   }
 
+  const contact = {
+    portfolio: 'https://sayantan.work',
+    email: 'web.dev.sayantan@gmail.com',
+    mobile: '+91 9748365829',
+    location: 'Kolkata',
+  }
+
   return (
     <section className='min-w-screen min-h-screen w-full h-full md:p-8 text-gray-800 dark:text-gray-100'>
       {/* Summary  */}
@@ -162,8 +169,8 @@ export default function Index() {
               clip-rule='evenodd'
             />
           </svg>
-          <a href='https://sayantan.work' className='pl-2'>
-            https://sayantan.work
+          <a href={contact.portfolio} className='pl-2'>
+            {contact.portfolio}
           </a>
         </div>
         <div className='email flex items-center my-4 md:my-0'>
@@ -171,8 +178,8 @@ export default function Index() {
             <path d='M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z' />
             <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
           </svg>
-          <a href='mailTo:web.dev.sayantan@gmail.com' target='_' className='pl-2'>
-            web.dev.sayantan@gmail.com
+          <a href={`mailTo:${contact.email}`} target='_' className='pl-2'>
+            {contact.email}
           </a>
         </div>
         <div className='phone flex items-center my-4 md:my-0'>
@@ -180,7 +187,17 @@ export default function Index() {
             <path d='M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z' />
             <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
           </svg>
-          <span className='pl-2'>+91 9748365829</span>
+          <span className='pl-2'>{contact.mobile}</span>
+        </div>
+        <div className='phone flex items-center my-4 md:my-0'>
+          <svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>
+            <path
+              fill-rule='evenodd'
+              d='M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z'
+              clip-rule='evenodd'
+            />
+          </svg>
+          <span className='pl-2'>{contact.location}</span>
         </div>
       </section>
       {/* body */}
