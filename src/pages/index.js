@@ -1,9 +1,11 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Skill from '../components/Skill'
 import Employment from '../components/Employment'
 import Certification from '../components/Certification'
-import { graphql } from 'gatsby'
 
 export default function Index({ data }) {
   console.log(data)
@@ -22,7 +24,11 @@ export default function Index({ data }) {
           <div className='designation pt-4'>{summary.designation}</div>
           <div className='skills pt-4 flex justify-center sm:justify-start flex-wrap gap-2'>
             {summary.primarySkills.map((skill) => (
-              <div className='bg-secondary rounded-full px-4 py-1 text-center' key={skill}>
+              <div className='bg-secondary rounded-full px-4 py-2 flex gap-2 items-center' key={skill}>
+                {skill === 'Javascript' && <StaticImage src='../images/javascript.svg' alt='' width='20' height='20' />}
+                {skill === 'Angular' && <StaticImage src='../images/angular.svg' alt='' width='24' height='24' />}
+                {skill === 'Next.js' && <StaticImage src='../images/next.svg' alt='' width='22' height='22' />}
+                {skill === 'NestJS' && <StaticImage src='../images/nestjs.svg' alt='' width='22' height='22' />}
                 {skill}
               </div>
             ))}
@@ -35,7 +41,7 @@ export default function Index({ data }) {
               <img src='/icons/linkedin.png' alt='linkedin' className='rounded-sm inline' width='32' height='32' />
             </a>
           </div>
-          <div className='text-center sm:text-left flex-1 p-4 mt-4 rounded-md bg-secondary'>
+          <div className='w-full text-center sm:text-left flex-1 py-4 '>
             <p>
               I develop web apps using Angular/React, Node.js and MongoDB. Would relish opportunities to contribute in
               backend and devops too.
