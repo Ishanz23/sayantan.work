@@ -10,6 +10,11 @@ module.exports = {
       tertiary: '#bacfd4',
       accent: '#582944',
     }),
+    textColor: (theme) => ({
+      ...theme('colors'),
+      primary: '#bacfd4',
+      accent: '#0f2e36',
+    }),
   },
   variants: {
     extend: {},

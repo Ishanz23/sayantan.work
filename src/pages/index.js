@@ -17,10 +17,23 @@ export default function Index({ data }) {
         <section className='w-full flex flex-col p-8 sm:py-4 sm:flex-row gap-8 items-center bg-primary text-gray-100 md:rounded-t-md'>
           <div className='dp'>
             <img src='/images/me.png' alt='dp' className='rounded-full' />
+            <a
+              href='https://drive.google.com/u/2/uc?id=19Bak--4JbZYERjIt4ZwVyeu1SVHK5Bl1&export=download'
+              target='_'
+              className='flex items-center justify-center text-base gap-1 px-4 py-2 mt-8 bg-tertiary hover:bg-gray-100 text-accent rounded-full font-bold shadow-lg transition-all duration-300'>
+              <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' viewBox='0 0 20 20' fill='currentColor'>
+                <path
+                  fill-rule='evenodd'
+                  d='M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z'
+                  clip-rule='evenodd'
+                />
+              </svg>
+              Resume
+            </a>
           </div>
           <div className='details flex-1 flex flex-col items-center sm:items-start'>
-            <div className='name text-4xl font-bold flex items-center'>{summary.name}</div>
-            <div className='designation pt-4'>{summary.designation}</div>
+            <div className='name text-4xl font-bold flex justify-center'>{summary.name}</div>
+            <div className='designation pt-4 font-semibold'>{summary.designation}</div>
             <div className='skills pt-4 flex justify-center sm:justify-start flex-wrap gap-2'>
               {summary.primarySkills.map((skill) => (
                 <a
