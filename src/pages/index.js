@@ -6,6 +6,8 @@ import Employment from '../components/Employment'
 import Certification from '../components/Certification'
 import Layout from '../components/Layout'
 
+import resume from '../../static/sayantan-resume-web-developer.pdf'
+
 export default function Index({ data }) {
   const { profilesJson } = data
   const { employments, education, internships, certifications, summary, contact, skills, languages } = profilesJson
@@ -18,8 +20,8 @@ export default function Index({ data }) {
           <div className='dp'>
             <img src='/images/me.png' alt='dp' className='rounded-full' />
             <a
-              href='https://drive.google.com/file/d/19Bak--4JbZYERjIt4ZwVyeu1SVHK5Bl1/view?usp=sharing'
-              target='_'
+              href={resume}
+              download
               className='flex items-center justify-center text-base gap-1 px-4 py-2 mt-8 bg-tertiary hover:bg-gray-100 text-accent rounded-full font-bold shadow-lg transition-all duration-300'>
               <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' viewBox='0 0 20 20' fill='currentColor'>
                 <path
