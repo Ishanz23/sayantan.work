@@ -100,18 +100,18 @@ export default function Index() {
     },
   ]
   const skills = [
-    { id: 'js', name: 'Javascript', level: '3/4' },
-    { id: 'ng', name: 'Angular', level: '3/4' },
-    { id: 'rct', name: 'React', level: '1/4' },
-    { id: 'njs', name: 'Node.js', level: '1/4' },
-    { id: 'mdb', name: 'MongoDB', level: '1/4' },
-    { id: 'gql', name: 'GraphQL', level: '1/4' },
+    { id: 'js', name: 'Javascript', level: 'w-3/4' },
+    { id: 'ng', name: 'Angular', level: 'w-3/4' },
+    { id: 'rct', name: 'React', level: 'w-1/4' },
+    { id: 'njs', name: 'Node.js', level: 'w-1/4' },
+    { id: 'mdb', name: 'MongoDB', level: 'w-1/4' },
+    { id: 'gql', name: 'GraphQL', level: 'w-1/4' },
   ]
 
   const languages = [
-    { id: 'bng', name: 'Bengali', level: 'full' },
-    { id: 'eng', name: 'English', level: '3/4' },
-    { id: 'hin', name: 'Hindi', level: '1/4' },
+    { id: 'bng', name: 'Bengali', level: 'w-full' },
+    { id: 'eng', name: 'English', level: 'w-3/4' },
+    { id: 'hin', name: 'Hindi', level: 'w-1/4' },
   ]
 
   const summary = {
