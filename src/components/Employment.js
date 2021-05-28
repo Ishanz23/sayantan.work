@@ -11,8 +11,8 @@ export default function Employment({ item }) {
       </div>
       <div className='details my-4 text-sm'>
         <ul className='list-disc pl-12'>
-          {item.details.map((detail, index) => (
-            <li key={index}>{detail}</li>
+          {item.details.map((detail) => (
+            <li key={detail}>{detail}</li>
           ))}
         </ul>
       </div>

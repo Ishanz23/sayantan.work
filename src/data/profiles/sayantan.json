@@ -1,0 +1,120 @@
+{
+  "employments": [
+    {
+      "title": "Frontend Developer",
+      "employer": "eRevMax Technologies Pvt Ltd",
+      "start": "November 2020",
+      "end": "Present",
+      "city": "Kolkata",
+      "details": [
+        "Developing an internal web based platform which contains other utility applications. Technologies used: Angular 11, Nx, Angular Material",
+        "Performing R&D and creating POCs on an alternate tech-stack Next.js-NestJs-Mongo-GraphQL for building a SEO-friendly fast Progressive Web App."
+      ]
+    },
+    {
+      "title": "Angular Developer",
+      "employer": "PRM Fincon",
+      "start": "April 2020",
+      "end": "October 2020",
+      "city": "Kolkata",
+      "details": [
+        "Frontend Developer in a team which was building a web based financial product that automates the entire loan approval process for corporates.",
+        "Technologies used: Angular 8, Nx, SCSS"
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "employer": "eRevMax Technologies Pvt Ltd",
+      "start": "October 2018",
+      "end": "March 2020",
+      "city": "Kolkata",
+      "details": [
+        "Developed the frontend for Agentx, a web based Travel Itinerary building app, that helps travel agents book hotels, flights, cabs and sight-seeing experiences for their customers.",
+        "Technologies used: Angular 8"
+      ]
+    },
+    {
+      "title": "Systems Engineer",
+      "employer": "Tata Consultancy Services",
+      "start": "September 2014",
+      "end": "October 2018",
+      "city": "Kolkata",
+      "details": [
+        "Got hands dirty on several technologies starting from Mainframe, Perl, VBScript, Java, Spring, ELK stack before finding my love for Modern Web Development.",
+        "Developed an web based book search repository for client using Angular 5, Bootstrap and Elasticsearch."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech",
+      "employer": "Netaji Subhash Engineering College",
+      "start": "August 2010",
+      "end": "June 2014",
+      "city": "Kolkata",
+      "details": ["Computer Science and Engineering", "GPA: 7.92"]
+    }
+  ],
+  "internships": [
+    {
+      "title": "Intern",
+      "employer": "IXIA Technologies",
+      "start": "July 2013",
+      "end": "July 2014",
+      "city": "Kolkata",
+      "details": [
+        "Learned a bit of Python and Django framework and built a performance management tracker for our internal team."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Angular - The Complete Guide",
+      "institution": "Udemy",
+      "completion": "December 2018",
+      "link": "https://www.udemy.com/certificate/UC-6PCFDJEK/"
+    },
+    {
+      "title": "JavaScript: Understanding the Weird Parts",
+      "institution": "Udemy",
+      "completion": "May 2021",
+      "link": "https://www.udemy.com/certificate/UC-62cea441-1ecb-4336-b685-700434ccd4bf/"
+    },
+    {
+      "title": "Reactive Angular Course (With RxJs)",
+      "institution": "Udemy",
+      "completion": "June 2020",
+      "link": "https://www.udemy.com/certificate/UC-9b0b8d72-c3c5-4ac4-9c3d-779ad2c6436f/"
+    },
+    {
+      "title": "React - The Complete Guide",
+      "institution": "Udemy",
+      "completion": "September 2018",
+      "link": "https://www.udemy.com/certificate/UC-TV0MCMDJ/"
+    }
+  ],
+  "skills": [
+    { "id": "js", "name": "Javascript", "level": "w-3/4" },
+    { "id": "ng", "name": "Angular", "level": "w-3/4" },
+    { "id": "rct", "name": "React", "level": "w-1/4" },
+    { "id": "njs", "name": "Node.js", "level": "w-1/4" },
+    { "id": "mdb", "name": "MongoDB", "level": "w-1/4" },
+    { "id": "gql", "name": "GraphQL", "level": "w-1/4" }
+  ],
+  "languages": [
+    { "id": "bng", "name": "Bengali", "level": "w-full" },
+    { "id": "eng", "name": "English", "level": "w-3/4" },
+    { "id": "hin", "name": "Hindi", "level": "w-1/4" }
+  ],
+  "summary": {
+    "name": "Sayantan Dey",
+    "designation": "Web Developer",
+    "primarySkills": ["Javascript", "Angular", "Next.js", "NestJS"]
+  },
+  "contact": {
+    "portfolio": "https://sayantan.work",
+    "email": "web.dev.sayantan@gmail.com",
+    "mobile": "+91 9748365829",
+    "location": "Kolkata"
+  }
+}
