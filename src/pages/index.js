@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { StaticImage } from 'gatsby-plugin-image'
-
 import Skill from '../components/Skill'
 import Employment from '../components/Employment'
 import Certification from '../components/Certification'
@@ -24,13 +22,10 @@ export default function Index({ data }) {
           <div className='designation pt-4'>{summary.designation}</div>
           <div className='skills pt-4 flex justify-center sm:justify-start flex-wrap gap-2'>
             {summary.primarySkills.map((skill) => (
-              <div className='bg-secondary rounded-full px-4 py-2 flex gap-2 items-center' key={skill}>
-                {skill === 'Javascript' && <StaticImage src='../images/javascript.svg' alt='' width='20' height='20' />}
-                {skill === 'Angular' && <StaticImage src='../images/angular.svg' alt='' width='24' height='24' />}
-                {skill === 'Next.js' && <StaticImage src='../images/next.svg' alt='' width='22' height='22' />}
-                {skill === 'NestJS' && <StaticImage src='../images/nestjs.svg' alt='' width='22' height='22' />}
-                {skill}
-              </div>
+              <a className='bg-secondary rounded-full px-4 py-2 flex gap-2 items-center' href={skill.url} key={skill}>
+                <img src={`/icons/${skill.icon}`} alt='' width='16' height='16' />
+                <span className='text-xs font-bold uppercase'>{skill.name}</span>
+              </a>
             ))}
           </div>
           <div className='links flex items-center pt-4'>
@@ -162,7 +157,11 @@ export const query = graphql`
       summary {
         designation
         name
-        primarySkills
+        primarySkills {
+          name
+          icon
+          url
+        }
       }
       contact {
         email

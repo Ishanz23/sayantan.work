@@ -109,7 +109,28 @@
   "summary": {
     "name": "Sayantan Dey",
     "designation": "Web Developer",
-    "primarySkills": ["Javascript", "Angular", "Next.js", "NestJS"]
+    "primarySkills": [
+      {
+        "name": "Javascript",
+        "icon": "javascript.svg",
+        "url": "https://www.javascript.com/"
+      },
+      {
+        "name": "Angular",
+        "icon": "angular.svg",
+        "url": "https://angular.io/"
+      },
+      {
+        "name": "Next.js",
+        "icon": "next.svg",
+        "url": "https://nextjs.org/"
+      },
+      {
+        "name": "NestJS",
+        "icon": "nest.svg",
+        "url": "https://nestjs.com/"
+      }
+    ]
   },
   "contact": {
     "portfolio": "https://sayantan.work",
