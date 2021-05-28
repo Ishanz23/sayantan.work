@@ -123,14 +123,14 @@ export default function Index() {
   return (
     <section className='min-w-screen min-h-screen w-full h-full p-8 text-gray-800 dark:text-gray-100'>
       {/* Summary  */}
-      <section className='w-full flex flex-col sm:flex-row gap-8 items-center px-8 py-4 bg-primary text-gray-100 rounded-t-md'>
+      <section className='w-full flex flex-col p-8 sm:py-4 sm:flex-row gap-8 items-center bg-primary text-gray-100 rounded-t-md'>
         <div className='dp'>
           <img src='/images/me.png' alt='dp' className='rounded-full' />
         </div>
         <div className='details flex-1 flex flex-col items-center sm:items-start'>
           <div className='name text-4xl font-bold flex items-center'>{summary.name}</div>
           <div className='designation pt-4'>{summary.designation}</div>
-          <div className='skills pt-4 flex gap-2'>
+          <div className='skills pt-4 flex justify-center sm:justify-start flex-wrap gap-2'>
             {summary.primarySkills.map((skill) => (
               <div className='bg-secondary rounded-full px-4 py-1 text-center'>{skill}</div>
             ))}
