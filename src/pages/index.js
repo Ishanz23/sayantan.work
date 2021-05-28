@@ -22,7 +22,11 @@ export default function Index({ data }) {
           <div className='designation pt-4'>{summary.designation}</div>
           <div className='skills pt-4 flex justify-center sm:justify-start flex-wrap gap-2'>
             {summary.primarySkills.map((skill) => (
-              <a className='bg-secondary rounded-full px-4 py-2 flex gap-2 items-center' href={skill.url} key={skill}>
+              <a
+                className='bg-secondary rounded-full px-4 py-2 flex gap-2 items-center'
+                href={skill.url}
+                target='_'
+                key={skill}>
                 <img src={`/icons/${skill.icon}`} alt='' width='16' height='16' />
                 <span className='text-xs font-bold uppercase'>{skill.name}</span>
               </a>
