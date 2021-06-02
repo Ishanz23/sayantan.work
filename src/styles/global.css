@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pride {
+  background: linear-gradient(to right, violet, #4754c9, #3aacf8, #1fe05f, #d6d625, #e98a1d, #db3b3b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+}

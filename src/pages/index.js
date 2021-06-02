@@ -34,7 +34,11 @@ export default function Index({ data }) {
             </a>
           </div>
           <div className='details flex-1 flex flex-col items-center sm:items-start'>
-            <div className='name text-4xl font-bold flex justify-center'>{summary.name}</div>
+            <div className='name text-4xl font-bold flex justify-center py-2 pride' title='More Strength to LGBTQ'>
+              <a href='https://nationaltoday.com/pride-month/' target='_'>
+                {summary.name}
+              </a>
+            </div>
             <div className='designation pt-4 font-semibold'>{summary.designation}</div>
             <div className='skills pt-4 flex justify-center sm:justify-start flex-wrap gap-2'>
               {summary.primarySkills.map((skill) => (
