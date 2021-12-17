@@ -1,10 +1,19 @@
 {
   "employments": [
     {
+      "title": "Angular Developer",
+      "employer": "Nagarro",
+      "start": "September 2021",
+      "end": "Present",
+      "city": "Pune",
+      "details": [
+        "Rewriting a JSF based legacy production web app using Angular 11 and PrimeNg"]
+    },
+    {
       "title": "Frontend Developer",
       "employer": "eRevMax Technologies Pvt Ltd",
       "start": "November 2020",
-      "end": "Present",
+      "end": "August 2020",
       "city": "Kolkata",
       "details": [
         "Developing an internal web based platform which contains other utility applications. Technologies used: Angular 11, Nx, Angular Material",
